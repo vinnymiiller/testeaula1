@@ -26,7 +26,7 @@ header {
     justify-content: space-around;
     align-items: center;
 }
-
+  
   .menu {
     font-family: 'Source Code Pro', monospace;
     position: fixed;
@@ -35,12 +35,12 @@ header {
   }
   
   .menu li{
-    list-style: square;
+    list-style: none;
   }
   
   .menu ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   
   .menu a {
@@ -53,10 +53,10 @@ header {
     text-decoration: none;
   }
   
-  a:hover {
+  .menu a:hover {
     text-decoration: underline;
     background: none;
-  }
+   }
   
   .site-subtitle,
   .site-title {
@@ -66,16 +66,18 @@ header {
   .site-title {
     color: #924a62;
     font-family: 'Permanent Marker', cursive;
-    margin: 30px;
+    margin: 0px;
   }
   .site-subtitle {
     color: #553e6a;
     font-family: 'Shadows Into Light', cursive;
-    line-height: 2.4em;
   }
+  .dices,
+  .contact,
   .portif {
     font-family: 'Shadows Into Light', cursive;
     color: #924a62;
+    text-align: center;
   }
   .site-testing {
     font-family: 'Shadows Into Light', cursive;
@@ -89,10 +91,10 @@ header {
     box-shadow:  0 0 50px 30px #664f7d;
     box-sizing: border-box;
   }
- 
+  .grid_icons,
+  .contact,
   .portifo {
     padding: 1em;
-
   }
 
   .portf {
@@ -129,19 +131,24 @@ header {
     height: 300px;
     width: 300px;
     object-fit: cover;
-    border-radius: 15%;
     object-position: top;
+    transition: 2s;
   }
+  .imgportf:hover {
+    transform: scale(2);
+    object-fit: scale-down;
+    object-position: center;
 
+  }
   .dice {
     padding: 1em;
-    height: 1vh;
+    height: 100vh;
   }
   .daice {
     display: grid;
     grid-template-columns: 200px 200px 200px;
     justify-content: space-around;
-    height: 90vh;
+    min-height: 90vh;
     align-content: space-evenly;
   }
 
@@ -159,4 +166,22 @@ header {
 
   .daice figure {
     text-align: center;
+  }
+  .grid_icons {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-evenly;
+  }
+
+  .contact {
+    padding: 0px;
+  }
+  .contato a {
+    color: deeppink;
+    font-size: 2em;
+    transition: 1s;
+  }
+  .contato a:active,
+  .contato a:hover {
+    text-shadow: 0px 0px 10px purple;
   }
